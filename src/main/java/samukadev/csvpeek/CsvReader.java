@@ -23,5 +23,14 @@ public class CsvReader {
             throw new RuntimeException(e);
         }
     }
+    public double average(List<String[]> csvData, int columnIndex) {
+        return csvData.stream()
+                .filter(row -> row.length > columnIndex)
+                .map(roww ->     roww[columnIndex].trim())
+                .filter(row -> row != null && !row.isEmpty() && row.matches("-?\\d+(\\.\\d+)?"))
+                .mapToDouble(row -> Double.parseDouble(row))
+                .average()
+                .orElse(0.0);
+    }
 
 }
