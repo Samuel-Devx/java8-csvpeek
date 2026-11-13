@@ -7,13 +7,16 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) throws IOException {
         CsvReader csvReader = new CsvReader();
-            List<String[]> csvPath = csvReader.readCsv("src/main/java/samukadev/csvpeek/files/example2.csv");
-
+        List<String[]> csvPath = csvReader.readCsv("src/main/java/samukadev/csvpeek/files/example2.csv");
+        String[] headers = csvReader.readHeader("src/main/java/samukadev/csvpeek/files/example2.csv");
         List<String> name = csvPath.stream()
                 .map(row -> row[1])
                 .collect(Collectors.toList());
 
         name.forEach(data -> System.out.println(data));
         System.out.println(csvReader.average(csvPath, 2));
+
+        csvReader.printTable(headers, csvPath);
+        csvReader.averageReport(csvPath, 2);SAS
     }
 }
