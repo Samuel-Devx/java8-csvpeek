@@ -12,13 +12,11 @@ Durante o desenvolvimento, também aproveitei para praticar organização de có
 
 ## Funcionalidades
 
-- Leitura de arquivos CSV.
-- Ignora automaticamente a primeira linha do arquivo (cabeçalho).
-- Transforma cada linha em um array de Strings.
-- Retorna os dados em uma lista.
-- Calcula a média de uma coluna numérica.
-- Ignora valores vazios, inválidos ou inexistentes durante o cálculo.
-- Possui validações para evitar erros com índices negativos e listas nulas.
+- **readCsv():** Lê um arquivo CSV e transforma seus registros em uma lista.
+- **readHeader():** Recupera os nomes das colunas do arquivo.
+- **printTable():** Exibe os dados em formato de tabela organizada no terminal.
+- **average():** Calcula a média dos valores numéricos de uma coluna.
+- **averageReport():** Apresenta um relatório com total de registros, valores válidos, inválidos e média calculada.
 
 ## Tecnologias utilizadas
 

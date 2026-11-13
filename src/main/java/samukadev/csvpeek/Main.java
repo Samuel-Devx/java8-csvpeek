@@ -17,6 +17,6 @@ public class Main {
         System.out.println(csvReader.average(csvPath, 2));
 
         csvReader.printTable(headers, csvPath);
-        csvReader.averageReport(csvPath, 2);SAS
+        csvReader.averageReport(csvPath, 2);
     }
 }
